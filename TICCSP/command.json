@@ -1,0 +1,25 @@
+{
+    
+    "start":{
+        "command":"RESET",
+        "checkState":1,
+        "isHex":0,
+        "cyclenum":0,
+        "sleeptime":"1000ms"
+    },
+    "test":{
+        "command":"startTest,@",
+        "checkState":1,
+        "isHex":0,
+        "cyclenum":0,
+        "sleeptime":"1000ms"
+    },
+    "monitor":{
+        "command":"startMonitor",
+        "checkState":1,
+        "isHex":0,
+        "cyclenum":0,
+        "sleeptime":"1000ms"
+    }
+    
+}

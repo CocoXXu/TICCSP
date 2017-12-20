@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18132B711FB0617F0047D25F /* YModelLoad.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 18132B701FB05DA80047D25F /* YModelLoad.scpt */; };
+		1817B11A1FB1A1B400744F74 /* YModemProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817B1191FB1A1B400744F74 /* YModemProcess.m */; };
+		1817B11D1FB1A3F500744F74 /* YModemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817B11C1FB1A3F500744F74 /* YModemManager.m */; };
+		1819E32D1FB1539B0069C92F /* command.json in Resources */ = {isa = PBXBuildFile; fileRef = 1819E32C1FB1539B0069C92F /* command.json */; };
+		1819E3301FB1591A0069C92F /* InputBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819E32F1FB1591A0069C92F /* InputBox.m */; };
+		1819E3331FB15A250069C92F /* CycleRunProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819E3321FB15A250069C92F /* CycleRunProcess.m */; };
+		181A154A1FB296AD009125B1 /* SocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A15491FB296AD009125B1 /* SocketServer.m */; };
+		181A154C1FB29CC3009125B1 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A154B1FB29CC3009125B1 /* CocoaAsyncSocket.framework */; };
+		183BEBBA1FE770160054365C /* UartDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 183BEBB61FE770160054365C /* UartDevice.m */; };
+		183BEBBB1FE770160054365C /* UART.mm in Sources */ = {isa = PBXBuildFile; fileRef = 183BEBB91FE770160054365C /* UART.mm */; };
+		185A19431F9EC5390057DCD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A19421F9EC5390057DCD1 /* AppDelegate.m */; };
+		185A19461F9EC5390057DCD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A19451F9EC5390057DCD1 /* main.m */; };
+		185A19491F9EC5390057DCD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A19481F9EC5390057DCD1 /* ViewController.m */; };
+		185A194B1F9EC5390057DCD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185A194A1F9EC5390057DCD1 /* Assets.xcassets */; };
+		185A194E1F9EC5390057DCD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185A194C1F9EC5390057DCD1 /* Main.storyboard */; };
+		185AAB041FDFBCC90085567B /* ConfigFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AAB031FDFBCC90085567B /* ConfigFunction.m */; };
+		185AAB071FDFCCE60085567B /* ConfirmKeyWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AAB061FDFCCE60085567B /* ConfirmKeyWord.m */; };
+		185B0FC81FCE4BF800E60053 /* testD2XXX.c in Sources */ = {isa = PBXBuildFile; fileRef = 185B0FC61FCE4BF800E60053 /* testD2XXX.c */; };
+		185B105B1FCEA0F100E60053 /* D2XXXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B105A1FCEA0F100E60053 /* D2XXXViewController.m */; };
+		185B10631FCEA86E00E60053 /* D2XXXWriteAndRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B10621FCEA86E00E60053 /* D2XXXWriteAndRead.m */; };
+		185C9E9B1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C9E9A1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m */; };
+		185EA9DA1FAABF4A00B34645 /* YModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9D91FAABF4A00B34645 /* YModelController.m */; };
+		185EA9DD1FAABF8B00B34645 /* SerialPortController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9DC1FAABF8B00B34645 /* SerialPortController.m */; };
+		185EA9E01FAABFA600B34645 /* BurninController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9DF1FAABFA600B34645 /* BurninController.m */; };
+		185EA9ED1FAAEF3800B34645 /* ORSSerialPortInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9E11FAAEF3800B34645 /* ORSSerialPortInstance.m */; };
+		185EA9EE1FAAEF3800B34645 /* ORSSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9E31FAAEF3800B34645 /* ORSSerialPort.m */; };
+		185EA9EF1FAAEF3800B34645 /* ORSSerialBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9E51FAAEF3800B34645 /* ORSSerialBuffer.m */; };
+		185EA9F01FAAEF3800B34645 /* ORSSerialPacketDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9E81FAAEF3800B34645 /* ORSSerialPacketDescriptor.m */; };
+		185EA9F11FAAEF3800B34645 /* ORSSerialPortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9EA1FAAEF3800B34645 /* ORSSerialPortManager.m */; };
+		185EA9F21FAAEF3800B34645 /* ORSSerialRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9EC1FAAEF3800B34645 /* ORSSerialRequest.m */; };
+		185EA9F51FAAF27200B34645 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9F31FAAF27200B34645 /* FileManager.m */; };
+		185EA9F81FAB011C00B34645 /* PublicSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9F71FAB011C00B34645 /* PublicSerialPort.m */; };
+		189381C01FB0525D007FEA7C /* YModem.c in Sources */ = {isa = PBXBuildFile; fileRef = 189381BE1FB0525D007FEA7C /* YModem.c */; };
+		189381C71FB054A7007FEA7C /* eeprom.c in Sources */ = {isa = PBXBuildFile; fileRef = 189381C11FB054A7007FEA7C /* eeprom.c */; };
+		189381C81FB054A7007FEA7C /* ftd2xx.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 189381C51FB054A7007FEA7C /* ftd2xx.cfg */; };
+		189381C91FB054A7007FEA7C /* libftd2xx.1.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 189381C61FB054A7007FEA7C /* libftd2xx.1.2.2.dylib */; };
+		189793A01FAC32E600618F59 /* SocketServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897939F1FAC32E600618F59 /* SocketServerController.m */; };
+		189793A31FAC32FD00618F59 /* SocketClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189793A21FAC32FD00618F59 /* SocketClientController.m */; };
+		189793A51FAC47C100618F59 /* YModel.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 189793A41FAC446F00618F59 /* YModel.scpt */; };
+		189793A81FAC4CC000618F59 /* ResetUserAndPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189793A71FAC4CC000618F59 /* ResetUserAndPwdController.m */; };
+		BCE8700E4E34A3ECC7844FE2 /* Pods_TICCSP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FC4A9F8FF5E0AEF3A8F05 /* Pods_TICCSP.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		136E6E3531E7C16F9998E1F0 /* Pods-TICCSP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICCSP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP.release.xcconfig"; sourceTree = "<group>"; };
+		18132B701FB05DA80047D25F /* YModelLoad.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = YModelLoad.scpt; sourceTree = "<group>"; };
+		1817B1181FB1A1B400744F74 /* YModemProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModemProcess.h; sourceTree = "<group>"; };
+		1817B1191FB1A1B400744F74 /* YModemProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YModemProcess.m; sourceTree = "<group>"; };
+		1817B11B1FB1A3F500744F74 /* YModemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModemManager.h; sourceTree = "<group>"; };
+		1817B11C1FB1A3F500744F74 /* YModemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YModemManager.m; sourceTree = "<group>"; };
+		1819E32C1FB1539B0069C92F /* command.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = command.json; sourceTree = "<group>"; };
+		1819E32E1FB1591A0069C92F /* InputBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBox.h; sourceTree = "<group>"; };
+		1819E32F1FB1591A0069C92F /* InputBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBox.m; sourceTree = "<group>"; };
+		1819E3311FB15A250069C92F /* CycleRunProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleRunProcess.h; sourceTree = "<group>"; };
+		1819E3321FB15A250069C92F /* CycleRunProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleRunProcess.m; sourceTree = "<group>"; };
+		181A15481FB296AD009125B1 /* SocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketServer.h; sourceTree = "<group>"; };
+		181A15491FB296AD009125B1 /* SocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketServer.m; sourceTree = "<group>"; };
+		181A154B1FB29CC3009125B1 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		183BEBB61FE770160054365C /* UartDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UartDevice.m; sourceTree = "<group>"; };
+		183BEBB71FE770160054365C /* UartDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UartDevice.h; sourceTree = "<group>"; };
+		183BEBB81FE770160054365C /* UART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UART.h; sourceTree = "<group>"; };
+		183BEBB91FE770160054365C /* UART.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UART.mm; sourceTree = "<group>"; };
+		185A193E1F9EC5390057DCD1 /* TICCSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TICCSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185A19411F9EC5390057DCD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		185A19421F9EC5390057DCD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		185A19451F9EC5390057DCD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		185A19471F9EC5390057DCD1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		185A19481F9EC5390057DCD1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		185A194A1F9EC5390057DCD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		185A194D1F9EC5390057DCD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		185A194F1F9EC5390057DCD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185AAB021FDFBCC90085567B /* ConfigFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigFunction.h; sourceTree = "<group>"; };
+		185AAB031FDFBCC90085567B /* ConfigFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigFunction.m; sourceTree = "<group>"; };
+		185AAB051FDFCCE60085567B /* ConfirmKeyWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmKeyWord.h; sourceTree = "<group>"; };
+		185AAB061FDFCCE60085567B /* ConfirmKeyWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmKeyWord.m; sourceTree = "<group>"; };
+		185B0FC61FCE4BF800E60053 /* testD2XXX.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testD2XXX.c; sourceTree = "<group>"; };
+		185B0FC71FCE4BF800E60053 /* testD2XXX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testD2XXX.h; sourceTree = "<group>"; };
+		185B10591FCEA0F100E60053 /* D2XXXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2XXXViewController.h; sourceTree = "<group>"; };
+		185B105A1FCEA0F100E60053 /* D2XXXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2XXXViewController.m; sourceTree = "<group>"; };
+		185B10611FCEA86E00E60053 /* D2XXXWriteAndRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2XXXWriteAndRead.h; sourceTree = "<group>"; };
+		185B10621FCEA86E00E60053 /* D2XXXWriteAndRead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2XXXWriteAndRead.m; sourceTree = "<group>"; };
+		185C9E991FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModemProcessWithD2XXX.h; sourceTree = "<group>"; };
+		185C9E9A1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YModemProcessWithD2XXX.m; sourceTree = "<group>"; };
+		185EA9D81FAABF4A00B34645 /* YModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModelController.h; sourceTree = "<group>"; };
+		185EA9D91FAABF4A00B34645 /* YModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YModelController.m; sourceTree = "<group>"; };
+		185EA9DB1FAABF8B00B34645 /* SerialPortController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialPortController.h; sourceTree = "<group>"; };
+		185EA9DC1FAABF8B00B34645 /* SerialPortController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialPortController.m; sourceTree = "<group>"; };
+		185EA9DE1FAABFA600B34645 /* BurninController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BurninController.h; path = ../BurninController.h; sourceTree = "<group>"; };
+		185EA9DF1FAABFA600B34645 /* BurninController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BurninController.m; path = ../BurninController.m; sourceTree = "<group>"; };
+		185EA9E11FAAEF3800B34645 /* ORSSerialPortInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPortInstance.m; sourceTree = "<group>"; };
+		185EA9E21FAAEF3800B34645 /* ORSSerialPortInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialPortInstance.h; sourceTree = "<group>"; };
+		185EA9E31FAAEF3800B34645 /* ORSSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPort.m; sourceTree = "<group>"; };
+		185EA9E41FAAEF3800B34645 /* ORSSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialPort.h; sourceTree = "<group>"; };
+		185EA9E51FAAEF3800B34645 /* ORSSerialBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialBuffer.m; sourceTree = "<group>"; };
+		185EA9E61FAAEF3800B34645 /* ORSSerialBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialBuffer.h; sourceTree = "<group>"; };
+		185EA9E71FAAEF3800B34645 /* ORSSerialPacketDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialPacketDescriptor.h; sourceTree = "<group>"; };
+		185EA9E81FAAEF3800B34645 /* ORSSerialPacketDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPacketDescriptor.m; sourceTree = "<group>"; };
+		185EA9E91FAAEF3800B34645 /* ORSSerialPortManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialPortManager.h; sourceTree = "<group>"; };
+		185EA9EA1FAAEF3800B34645 /* ORSSerialPortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPortManager.m; sourceTree = "<group>"; };
+		185EA9EB1FAAEF3800B34645 /* ORSSerialRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialRequest.h; sourceTree = "<group>"; };
+		185EA9EC1FAAEF3800B34645 /* ORSSerialRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialRequest.m; sourceTree = "<group>"; };
+		185EA9F31FAAF27200B34645 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		185EA9F41FAAF27200B34645 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		185EA9F61FAB011C00B34645 /* PublicSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicSerialPort.h; sourceTree = "<group>"; };
+		185EA9F71FAB011C00B34645 /* PublicSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicSerialPort.m; sourceTree = "<group>"; };
+		189381BE1FB0525D007FEA7C /* YModem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YModem.c; sourceTree = "<group>"; };
+		189381BF1FB0525D007FEA7C /* YModem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModem.h; sourceTree = "<group>"; };
+		189381C11FB054A7007FEA7C /* eeprom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = eeprom.c; sourceTree = "<group>"; };
+		189381C21FB054A7007FEA7C /* eeprom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eeprom.h; sourceTree = "<group>"; };
+		189381C31FB054A7007FEA7C /* WinTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinTypes.h; sourceTree = "<group>"; };
+		189381C41FB054A7007FEA7C /* ftd2xx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftd2xx.h; sourceTree = "<group>"; };
+		189381C51FB054A7007FEA7C /* ftd2xx.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ftd2xx.cfg; sourceTree = "<group>"; };
+		189381C61FB054A7007FEA7C /* libftd2xx.1.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libftd2xx.1.2.2.dylib; sourceTree = "<group>"; };
+		1897939E1FAC32E600618F59 /* SocketServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketServerController.h; sourceTree = "<group>"; };
+		1897939F1FAC32E600618F59 /* SocketServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketServerController.m; sourceTree = "<group>"; };
+		189793A11FAC32FD00618F59 /* SocketClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClientController.h; sourceTree = "<group>"; };
+		189793A21FAC32FD00618F59 /* SocketClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketClientController.m; sourceTree = "<group>"; };
+		189793A41FAC446F00618F59 /* YModel.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = YModel.scpt; sourceTree = "<group>"; };
+		189793A61FAC4CC000618F59 /* ResetUserAndPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetUserAndPwdController.h; sourceTree = "<group>"; };
+		189793A71FAC4CC000618F59 /* ResetUserAndPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetUserAndPwdController.m; sourceTree = "<group>"; };
+		62085A9B8E26A2578D5FE703 /* Pods-TICCSP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICCSP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP.debug.xcconfig"; sourceTree = "<group>"; };
+		A90FC4A9F8FF5E0AEF3A8F05 /* Pods_TICCSP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TICCSP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		185A193B1F9EC5390057DCD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181A154C1FB29CC3009125B1 /* CocoaAsyncSocket.framework in Frameworks */,
+				BCE8700E4E34A3ECC7844FE2 /* Pods_TICCSP.framework in Frameworks */,
+				189381C91FB054A7007FEA7C /* libftd2xx.1.2.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0812FF905871B9D7A13C9D0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62085A9B8E26A2578D5FE703 /* Pods-TICCSP.debug.xcconfig */,
+				136E6E3531E7C16F9998E1F0 /* Pods-TICCSP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		185A19351F9EC5380057DCD1 = {
+			isa = PBXGroup;
+			children = (
+				185A19401F9EC5390057DCD1 /* TICCSP */,
+				185A193F1F9EC5390057DCD1 /* Products */,
+				0812FF905871B9D7A13C9D0A /* Pods */,
+				1EFD05C565A552987D72C014 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		185A193F1F9EC5390057DCD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				185A193E1F9EC5390057DCD1 /* TICCSP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		185A19401F9EC5390057DCD1 /* TICCSP */ = {
+			isa = PBXGroup;
+			children = (
+				181A154B1FB29CC3009125B1 /* CocoaAsyncSocket.framework */,
+				1817B1181FB1A1B400744F74 /* YModemProcess.h */,
+				1817B1191FB1A1B400744F74 /* YModemProcess.m */,
+				1819E32E1FB1591A0069C92F /* InputBox.h */,
+				1819E32F1FB1591A0069C92F /* InputBox.m */,
+				1819E32C1FB1539B0069C92F /* command.json */,
+				189381C11FB054A7007FEA7C /* eeprom.c */,
+				189381C21FB054A7007FEA7C /* eeprom.h */,
+				189381C31FB054A7007FEA7C /* WinTypes.h */,
+				189381C41FB054A7007FEA7C /* ftd2xx.h */,
+				189381C51FB054A7007FEA7C /* ftd2xx.cfg */,
+				189381C61FB054A7007FEA7C /* libftd2xx.1.2.2.dylib */,
+				189381BE1FB0525D007FEA7C /* YModem.c */,
+				189381BF1FB0525D007FEA7C /* YModem.h */,
+				183BEBB61FE770160054365C /* UartDevice.m */,
+				183BEBB71FE770160054365C /* UartDevice.h */,
+				183BEBB81FE770160054365C /* UART.h */,
+				183BEBB91FE770160054365C /* UART.mm */,
+				1817B11B1FB1A3F500744F74 /* YModemManager.h */,
+				1817B11C1FB1A3F500744F74 /* YModemManager.m */,
+				1819E3311FB15A250069C92F /* CycleRunProcess.h */,
+				1819E3321FB15A250069C92F /* CycleRunProcess.m */,
+				185EA9F31FAAF27200B34645 /* FileManager.m */,
+				185EA9F41FAAF27200B34645 /* FileManager.h */,
+				18132B701FB05DA80047D25F /* YModelLoad.scpt */,
+				189793A41FAC446F00618F59 /* YModel.scpt */,
+				185EA9E11FAAEF3800B34645 /* ORSSerialPortInstance.m */,
+				185EA9E21FAAEF3800B34645 /* ORSSerialPortInstance.h */,
+				185EA9E31FAAEF3800B34645 /* ORSSerialPort.m */,
+				185EA9E41FAAEF3800B34645 /* ORSSerialPort.h */,
+				185EA9E51FAAEF3800B34645 /* ORSSerialBuffer.m */,
+				185EA9E61FAAEF3800B34645 /* ORSSerialBuffer.h */,
+				185EA9E71FAAEF3800B34645 /* ORSSerialPacketDescriptor.h */,
+				185EA9E81FAAEF3800B34645 /* ORSSerialPacketDescriptor.m */,
+				185EA9E91FAAEF3800B34645 /* ORSSerialPortManager.h */,
+				185EA9EA1FAAEF3800B34645 /* ORSSerialPortManager.m */,
+				185EA9EB1FAAEF3800B34645 /* ORSSerialRequest.h */,
+				185EA9EC1FAAEF3800B34645 /* ORSSerialRequest.m */,
+				185A19411F9EC5390057DCD1 /* AppDelegate.h */,
+				185A19421F9EC5390057DCD1 /* AppDelegate.m */,
+				185A19471F9EC5390057DCD1 /* ViewController.h */,
+				185A19481F9EC5390057DCD1 /* ViewController.m */,
+				185A194A1F9EC5390057DCD1 /* Assets.xcassets */,
+				185A194C1F9EC5390057DCD1 /* Main.storyboard */,
+				185A194F1F9EC5390057DCD1 /* Info.plist */,
+				185A19441F9EC5390057DCD1 /* Supporting Files */,
+				185EA9F61FAB011C00B34645 /* PublicSerialPort.h */,
+				185EA9F71FAB011C00B34645 /* PublicSerialPort.m */,
+				185EA9D81FAABF4A00B34645 /* YModelController.h */,
+				185EA9D91FAABF4A00B34645 /* YModelController.m */,
+				185EA9DB1FAABF8B00B34645 /* SerialPortController.h */,
+				185EA9DC1FAABF8B00B34645 /* SerialPortController.m */,
+				185EA9DE1FAABFA600B34645 /* BurninController.h */,
+				185EA9DF1FAABFA600B34645 /* BurninController.m */,
+				189793A61FAC4CC000618F59 /* ResetUserAndPwdController.h */,
+				189793A71FAC4CC000618F59 /* ResetUserAndPwdController.m */,
+				1897939E1FAC32E600618F59 /* SocketServerController.h */,
+				1897939F1FAC32E600618F59 /* SocketServerController.m */,
+				189793A11FAC32FD00618F59 /* SocketClientController.h */,
+				189793A21FAC32FD00618F59 /* SocketClientController.m */,
+				181A15481FB296AD009125B1 /* SocketServer.h */,
+				181A15491FB296AD009125B1 /* SocketServer.m */,
+				185B0FC61FCE4BF800E60053 /* testD2XXX.c */,
+				185B0FC71FCE4BF800E60053 /* testD2XXX.h */,
+				185B10591FCEA0F100E60053 /* D2XXXViewController.h */,
+				185B105A1FCEA0F100E60053 /* D2XXXViewController.m */,
+				185B10611FCEA86E00E60053 /* D2XXXWriteAndRead.h */,
+				185B10621FCEA86E00E60053 /* D2XXXWriteAndRead.m */,
+				185C9E991FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.h */,
+				185C9E9A1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m */,
+				185AAB021FDFBCC90085567B /* ConfigFunction.h */,
+				185AAB031FDFBCC90085567B /* ConfigFunction.m */,
+				185AAB051FDFCCE60085567B /* ConfirmKeyWord.h */,
+				185AAB061FDFCCE60085567B /* ConfirmKeyWord.m */,
+			);
+			path = TICCSP;
+			sourceTree = "<group>";
+		};
+		185A19441F9EC5390057DCD1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				185A19451F9EC5390057DCD1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1EFD05C565A552987D72C014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A90FC4A9F8FF5E0AEF3A8F05 /* Pods_TICCSP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		185A193D1F9EC5390057DCD1 /* TICCSP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185A19521F9EC5390057DCD1 /* Build configuration list for PBXNativeTarget "TICCSP" */;
+			buildPhases = (
+				04212F0CD14DF55923C0DDB5 /* [CP] Check Pods Manifest.lock */,
+				185A193A1F9EC5390057DCD1 /* Sources */,
+				185A193B1F9EC5390057DCD1 /* Frameworks */,
+				185A193C1F9EC5390057DCD1 /* Resources */,
+				7D0440AD4BA579DD93A5AF6D /* [CP] Embed Pods Frameworks */,
+				F87C38A078EF43C74D29DA6F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TICCSP;
+			productName = TICCSP;
+			productReference = 185A193E1F9EC5390057DCD1 /* TICCSP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		185A19361F9EC5380057DCD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = coco;
+				TargetAttributes = {
+					185A193D1F9EC5390057DCD1 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 185A19391F9EC5380057DCD1 /* Build configuration list for PBXProject "TICCSP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 185A19351F9EC5380057DCD1;
+			productRefGroup = 185A193F1F9EC5390057DCD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				185A193D1F9EC5390057DCD1 /* TICCSP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		185A193C1F9EC5390057DCD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18132B711FB0617F0047D25F /* YModelLoad.scpt in Resources */,
+				1819E32D1FB1539B0069C92F /* command.json in Resources */,
+				189381C81FB054A7007FEA7C /* ftd2xx.cfg in Resources */,
+				189793A51FAC47C100618F59 /* YModel.scpt in Resources */,
+				185A194B1F9EC5390057DCD1 /* Assets.xcassets in Resources */,
+				185A194E1F9EC5390057DCD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04212F0CD14DF55923C0DDB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TICCSP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0440AD4BA579DD93A5AF6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F87C38A078EF43C74D29DA6F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		185A193A1F9EC5390057DCD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185EA9ED1FAAEF3800B34645 /* ORSSerialPortInstance.m in Sources */,
+				185A19491F9EC5390057DCD1 /* ViewController.m in Sources */,
+				185EA9E01FAABFA600B34645 /* BurninController.m in Sources */,
+				185EA9EE1FAAEF3800B34645 /* ORSSerialPort.m in Sources */,
+				1817B11D1FB1A3F500744F74 /* YModemManager.m in Sources */,
+				185A19461F9EC5390057DCD1 /* main.m in Sources */,
+				185AAB071FDFCCE60085567B /* ConfirmKeyWord.m in Sources */,
+				1819E3331FB15A250069C92F /* CycleRunProcess.m in Sources */,
+				185EA9F11FAAEF3800B34645 /* ORSSerialPortManager.m in Sources */,
+				189381C71FB054A7007FEA7C /* eeprom.c in Sources */,
+				185EA9F21FAAEF3800B34645 /* ORSSerialRequest.m in Sources */,
+				183BEBBB1FE770160054365C /* UART.mm in Sources */,
+				185EA9F81FAB011C00B34645 /* PublicSerialPort.m in Sources */,
+				1817B11A1FB1A1B400744F74 /* YModemProcess.m in Sources */,
+				185A19431F9EC5390057DCD1 /* AppDelegate.m in Sources */,
+				189793A01FAC32E600618F59 /* SocketServerController.m in Sources */,
+				185B0FC81FCE4BF800E60053 /* testD2XXX.c in Sources */,
+				185C9E9B1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m in Sources */,
+				189793A81FAC4CC000618F59 /* ResetUserAndPwdController.m in Sources */,
+				185EA9DA1FAABF4A00B34645 /* YModelController.m in Sources */,
+				185AAB041FDFBCC90085567B /* ConfigFunction.m in Sources */,
+				185B105B1FCEA0F100E60053 /* D2XXXViewController.m in Sources */,
+				185EA9F01FAAEF3800B34645 /* ORSSerialPacketDescriptor.m in Sources */,
+				181A154A1FB296AD009125B1 /* SocketServer.m in Sources */,
+				185EA9DD1FAABF8B00B34645 /* SerialPortController.m in Sources */,
+				185EA9EF1FAAEF3800B34645 /* ORSSerialBuffer.m in Sources */,
+				185EA9F51FAAF27200B34645 /* FileManager.m in Sources */,
+				183BEBBA1FE770160054365C /* UartDevice.m in Sources */,
+				189381C01FB0525D007FEA7C /* YModem.c in Sources */,
+				1819E3301FB1591A0069C92F /* InputBox.m in Sources */,
+				185B10631FCEA86E00E60053 /* D2XXXWriteAndRead.m in Sources */,
+				189793A31FAC32FD00618F59 /* SocketClientController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		185A194C1F9EC5390057DCD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185A194D1F9EC5390057DCD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		185A19501F9EC5390057DCD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		185A19511F9EC5390057DCD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		185A19531F9EC5390057DCD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62085A9B8E26A2578D5FE703 /* Pods-TICCSP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TICCSP",
+				);
+				INFOPLIST_FILE = TICCSP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TICCSP",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rhac.TICCSP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		185A19541F9EC5390057DCD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 136E6E3531E7C16F9998E1F0 /* Pods-TICCSP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TICCSP",
+				);
+				INFOPLIST_FILE = TICCSP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TICCSP",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rhac.TICCSP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		185A19391F9EC5380057DCD1 /* Build configuration list for PBXProject "TICCSP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185A19501F9EC5390057DCD1 /* Debug */,
+				185A19511F9EC5390057DCD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185A19521F9EC5390057DCD1 /* Build configuration list for PBXNativeTarget "TICCSP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185A19531F9EC5390057DCD1 /* Debug */,
+				185A19541F9EC5390057DCD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 185A19361F9EC5380057DCD1 /* Project object */;
+}
