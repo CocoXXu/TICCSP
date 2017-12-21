@@ -61,25 +61,23 @@
     }
 }
 - (IBAction)getInfo:(id)sender {
-    testWrite();
-    return;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showFTDIMessage" object:self userInfo:nil];
 }
 
 - (IBAction)fixDesc:(id)sender {
-    
     mainWriteDesciption([[_PopUp_FTDI titleOfSelectedItem] UTF8String] , [[_label_description stringValue] UTF8String]);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showFTDIMessage" object:self userInfo:nil];
 }
 
 - (IBAction)fixSerialNum:(id)sender {
     
     mainWriteName([[_PopUp_FTDI titleOfSelectedItem] UTF8String] , [[_label_serialnum stringValue] UTF8String]);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showFTDIMessage" object:self userInfo:nil];
+    
 }
 
 -(void)viewWillDisappear{
     NSString *result = [FileManager YmodelScript:@"YModelLoad.scpt"];
-//    ResetUserAndPwdController * resetPwdController = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"ResetUserAndPwdController"];
-    [self performSegueWithIdentifier:@"resetUserAndPwd" sender:self];
     if ([result isEqualToString:@"The administrator user name or password was incorrect."]) {
         [self performSegueWithIdentifier:@"resetUserAndPwd" sender:self];
     }else if ([result isNotEqualTo:@"ok"]){

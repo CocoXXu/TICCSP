@@ -1,6 +1,7 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #import "UART.h"
+#import "FileManager.h"
 
 @implementation UART
 
@@ -77,6 +78,8 @@
 		self->uart_path   = [[NSString alloc] initWithString:path];
 		//self->uart_nl     = @"\r\n";
 		self->uart_nl     = @"\r";
+        dataReceive = [[NSMutableData alloc] initWithCapacity:0];
+        [self readUart];
 
 	}
     
@@ -92,6 +95,25 @@ error:
 	self = nil;
     
 	return self;
+}
+-(void)readUart{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        while (1) {
+            NSData *data = [self readtheUart];
+            if (data.length > 0) {
+                [dataReceive appendData:data];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"debugMessage" object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[FileManager TimeStamp],@"time",@"Receive",@"status",data,@"message", nil]];
+            }
+            [NSThread sleepForTimeInterval:0.001];
+        }
+    });
+}
+
+-(NSData *)read{
+    NSData *data = [NSData dataWithData:dataReceive];
+    [dataReceive resetBytesInRange:NSMakeRange(0, dataReceive.length)];
+    [dataReceive setLength:0];
+    return data;
 }
 
 - (void) closePort
@@ -194,7 +216,7 @@ error:
 //    if (count_nl>0) {
 //        count=count+count_nl;
 //    }
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"debugMessage" object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[FileManager TimeStamp],@"time",@"Send",@"status",dataSend,@"message", nil]];
     return count;
 }
 -(int) writeLine:(NSString *)str
@@ -208,7 +230,7 @@ error:
 	return [self write:[str stringByAppendingString:self.uart_nl]];
 }
 
--(NSData *)read
+-(NSData *)readtheUart
 {
 	char      buffer[8192];
 	ssize_t   numBytes;

@@ -85,7 +85,22 @@
     }
     return commandArray;
 }
++(NSDictionary *)getConfigFromConfigJson{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+    NSString *content = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dict_config = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    return dict_config;
+}
 
++(void)saveConfigFromConfigJson:(NSDictionary *)dict{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+    NSOutputStream *outStream = [[NSOutputStream alloc] initToFileAtPath:filePath append:NO];
+    [outStream open];
+    [NSJSONSerialization writeJSONObject:dict toStream:outStream options:NSJSONWritingPrettyPrinted error:nil];
+    [outStream close];
+    
+}
 +(NSArray*)GetCommandArrayFromCommandJsonWithPath:(NSString *)filePath{
     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         return nil;

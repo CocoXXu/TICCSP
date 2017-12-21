@@ -591,31 +591,31 @@
                                                     <menuItem title="5K" id="aE0-x8-ZpU">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="setLogSIze5K:" target="Ady-hI-5gd" id="jJN-Qn-eDC"/>
+                                                            <action selector="setLogSize5M:" target="Ady-hI-5gd" id="mfw-qr-vAo"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem title="10K" state="on" id="ZHc-7V-m80">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="setLogSize10K:" target="Ady-hI-5gd" id="kWs-oe-ZTH"/>
+                                                            <action selector="setLogSize100K:" target="Ady-hI-5gd" id="9ip-73-jWy"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem title="100K" id="84M-I8-1WC">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="setLogSize100K:" target="Ady-hI-5gd" id="HD4-XR-FsB"/>
+                                                            <action selector="setLogSize100K:" target="Ady-hI-5gd" id="DRI-dc-meP"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem title="1M" id="x2x-JQ-vOZ">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="setLogSize1M:" target="Ady-hI-5gd" id="te2-Wr-TLz"/>
+                                                            <action selector="setLogSize1M:" target="Ady-hI-5gd" id="z81-6K-1Aa"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem title="5M" id="8Jh-TP-SCD">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="setLogSize5M:" target="Ady-hI-5gd" id="ReI-FD-APq"/>
+                                                            <action selector="setLogSize5M:" target="Ady-hI-5gd" id="Pv6-vG-fTt"/>
                                                         </connections>
                                                     </menuItem>
                                                 </items>
@@ -624,13 +624,13 @@
                                         <menuItem title="导入配置文件" id="HBV-hK-a9J" userLabel="导入配置文件">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="importConfigFile:" target="Ady-hI-5gd" id="Elt-hl-JZB"/>
+                                                <action selector="importConfigFile:" target="Ady-hI-5gd" id="B0e-hq-Dcd"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="保存配置文件" id="6yl-x3-v7Y" userLabel="保存配置文件">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="saveConfigFile:" target="Ady-hI-5gd" id="yrX-le-dwa"/>
+                                                <action selector="saveConfigFile:" target="Ady-hI-5gd" id="OQ9-zZ-6c2"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="功能配置" id="Qoh-7h-K8m" userLabel="功能配置">
@@ -1173,9 +1173,6 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="isCRC:" target="9aA-oz-8YO" id="RlF-my-yEj"/>
-                                </connections>
                             </button>
                             <textField identifier="end" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JLH-mM-jrE">
                                 <rect key="frame" x="333" y="157" width="47" height="22"/>
@@ -1191,9 +1188,6 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="endSymbol:" target="9aA-oz-8YO" id="K0U-Wv-fvF"/>
-                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r65-JT-zfX">
                                 <rect key="frame" x="17" y="103" width="81" height="18"/>
@@ -1377,7 +1371,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
                                 <connections>
-                                    <action selector="act_bandRate:" target="IAV-6u-LgA" id="5La-EZ-olb"/>
+                                    <action selector="actComboBoxBandRate:" target="9aA-oz-8YO" id="pEy-gw-5ms"/>
                                 </connections>
                             </comboBox>
                         </subviews>
@@ -1648,7 +1642,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d93-fZ-AtT">
-                                <rect key="frame" x="268" y="221" width="47" height="17"/>
+                                <rect key="frame" x="19" y="188" width="47" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="端口号:" id="Wb0-jY-q6l">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1656,7 +1650,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2L5-bJ-aJL">
-                                <rect key="frame" x="331" y="218" width="62" height="22"/>
+                                <rect key="frame" x="72" y="185" width="85" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="L9G-ta-daa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1664,14 +1658,47 @@
                                 </textFieldCell>
                             </textField>
                             <button toolTip="产品描述，目前仅作为串口线的一个标示，未做其他用途。" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-qK-axx">
-                                <rect key="frame" x="409" y="211" width="66" height="32"/>
+                                <rect key="frame" x="404" y="181" width="66" height="32"/>
                                 <buttonCell key="cell" type="push" title="打开" alternateTitle="aaaaaa" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZNk-TI-GHR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="actOpen:" target="qKp-qK-lSM" id="bVv-k8-dzI"/>
+                                </connections>
                             </button>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ez6-tc-hDx">
+                                <rect key="frame" x="281" y="184" width="111" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="kSk-gD-XNs" id="rdk-u3-g3F">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="xcN-wY-DUc">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="kSk-gD-XNs"/>
+                                            <menuItem title="Item 2" id="fHR-ig-CSw"/>
+                                            <menuItem title="Item 3" id="A46-6p-Rkd"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="act_parity:" target="IAV-6u-LgA" id="5Ic-bb-bgP"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOI-e9-N97">
+                                <rect key="frame" x="231" y="186" width="54" height="20"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Parity:" id="05z-Pf-c75">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="buttonOpen" destination="1Ta-qK-axx" id="it5-WT-huL"/>
+                        <outlet property="tfHostIP" destination="xhC-XZ-e9q" id="umH-PP-yS0"/>
+                        <outlet property="tfPort" destination="2L5-bJ-aJL" id="Tbr-U4-gLH"/>
+                    </connections>
                 </viewController>
                 <customObject id="Umf-fH-4mC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

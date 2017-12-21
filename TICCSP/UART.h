@@ -11,6 +11,7 @@
 	NSString *uart_filePath;
 	
 	NSFileHandle         *uart_log;
+    NSMutableData *dataReceive;
 
 }
 

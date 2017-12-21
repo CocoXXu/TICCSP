@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1801A3A31FEB415700525391 /* ComboBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1801A3A21FEB415700525391 /* ComboBoxCell.m */; };
 		18132B711FB0617F0047D25F /* YModelLoad.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 18132B701FB05DA80047D25F /* YModelLoad.scpt */; };
 		1817B11A1FB1A1B400744F74 /* YModemProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817B1191FB1A1B400744F74 /* YModemProcess.m */; };
 		1817B11D1FB1A3F500744F74 /* YModemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817B11C1FB1A3F500744F74 /* YModemManager.m */; };
@@ -47,11 +48,14 @@
 		189793A31FAC32FD00618F59 /* SocketClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189793A21FAC32FD00618F59 /* SocketClientController.m */; };
 		189793A51FAC47C100618F59 /* YModel.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 189793A41FAC446F00618F59 /* YModel.scpt */; };
 		189793A81FAC4CC000618F59 /* ResetUserAndPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189793A71FAC4CC000618F59 /* ResetUserAndPwdController.m */; };
+		18F67C371FEA0109002A1C88 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F67C361FEA0109002A1C88 /* config.json */; };
 		BCE8700E4E34A3ECC7844FE2 /* Pods_TICCSP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FC4A9F8FF5E0AEF3A8F05 /* Pods_TICCSP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		136E6E3531E7C16F9998E1F0 /* Pods-TICCSP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICCSP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP.release.xcconfig"; sourceTree = "<group>"; };
+		1801A3A11FEB415700525391 /* ComboBoxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboBoxCell.h; sourceTree = "<group>"; };
+		1801A3A21FEB415700525391 /* ComboBoxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxCell.m; sourceTree = "<group>"; };
 		18132B701FB05DA80047D25F /* YModelLoad.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = YModelLoad.scpt; sourceTree = "<group>"; };
 		1817B1181FB1A1B400744F74 /* YModemProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModemProcess.h; sourceTree = "<group>"; };
 		1817B1191FB1A1B400744F74 /* YModemProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YModemProcess.m; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		189793A41FAC446F00618F59 /* YModel.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = YModel.scpt; sourceTree = "<group>"; };
 		189793A61FAC4CC000618F59 /* ResetUserAndPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetUserAndPwdController.h; sourceTree = "<group>"; };
 		189793A71FAC4CC000618F59 /* ResetUserAndPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetUserAndPwdController.m; sourceTree = "<group>"; };
+		18F67C361FEA0109002A1C88 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		62085A9B8E26A2578D5FE703 /* Pods-TICCSP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICCSP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP.debug.xcconfig"; sourceTree = "<group>"; };
 		A90FC4A9F8FF5E0AEF3A8F05 /* Pods_TICCSP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TICCSP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,6 +185,7 @@
 				1817B1191FB1A1B400744F74 /* YModemProcess.m */,
 				1819E32E1FB1591A0069C92F /* InputBox.h */,
 				1819E32F1FB1591A0069C92F /* InputBox.m */,
+				18F67C361FEA0109002A1C88 /* config.json */,
 				1819E32C1FB1539B0069C92F /* command.json */,
 				189381C11FB054A7007FEA7C /* eeprom.c */,
 				189381C21FB054A7007FEA7C /* eeprom.h */,
@@ -249,6 +255,8 @@
 				185AAB031FDFBCC90085567B /* ConfigFunction.m */,
 				185AAB051FDFCCE60085567B /* ConfirmKeyWord.h */,
 				185AAB061FDFCCE60085567B /* ConfirmKeyWord.m */,
+				1801A3A11FEB415700525391 /* ComboBoxCell.h */,
+				1801A3A21FEB415700525391 /* ComboBoxCell.m */,
 			);
 			path = TICCSP;
 			sourceTree = "<group>";
@@ -329,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F67C371FEA0109002A1C88 /* config.json in Resources */,
 				18132B711FB0617F0047D25F /* YModelLoad.scpt in Resources */,
 				1819E32D1FB1539B0069C92F /* command.json in Resources */,
 				189381C81FB054A7007FEA7C /* ftd2xx.cfg in Resources */,
@@ -414,6 +423,7 @@
 				185EA9F21FAAEF3800B34645 /* ORSSerialRequest.m in Sources */,
 				183BEBBB1FE770160054365C /* UART.mm in Sources */,
 				185EA9F81FAB011C00B34645 /* PublicSerialPort.m in Sources */,
+				1801A3A31FEB415700525391 /* ComboBoxCell.m in Sources */,
 				1817B11A1FB1A1B400744F74 /* YModemProcess.m in Sources */,
 				185A19431F9EC5390057DCD1 /* AppDelegate.m in Sources */,
 				189793A01FAC32E600618F59 /* SocketServerController.m in Sources */,

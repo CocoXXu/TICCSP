@@ -38,6 +38,7 @@
     [_pop_serialPort setTitle:[[PublicSerialPort shareInstance] getcurrentSerialPort]];
     [_ComboBox_BandRate addItemsWithObjectValues:[[PublicSerialPort shareInstance] getarray_bandRate]];
     [_ComboBox_BandRate selectItemWithObjectValue:[[PublicSerialPort shareInstance] getcurrentBandRate]];
+    [_ComboBox_BandRate setDelegate:self];
     [_pop_parity addItemsWithTitles:[[PublicSerialPort shareInstance] getarray_parity]];
     [_pop_parity setTitle:[[PublicSerialPort shareInstance] getcurrentParity]];
     devecePath = [[PublicSerialPort shareInstance] getdevecePath];
@@ -180,6 +181,54 @@
 
 -(void)viewDidDisappear{
     [[ORSSerialPortInstance shareInstance] closeSerialPortWithPath:devecePath];
+}
+
+-(void)controlTextDidChange:(NSNotification*)notification
+{
+    id object = [notification object];
+    [object setCompletes:YES];//这个函数可以实现自动匹配功能
+    
+}
+
+-(NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox{
+    NSArray *arrayOld = [[PublicSerialPort shareInstance] getarray_bandRate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS '%@'",aComboBox.objectValueOfSelectedItem];
+    NSArray *arrayNew = [arrayOld filteredArrayUsingPredicate:predicate];
+    if (arrayNew.count > 0) {
+        return arrayNew.count;
+    }else{
+        return 0;
+    }
+}
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index{
+    
+    NSString *content = nil;
+    NSArray *arrayOld = [[PublicSerialPort shareInstance] getarray_bandRate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS '%@'",aComboBox.objectValueOfSelectedItem];
+    NSArray *arrayNew = [arrayOld filteredArrayUsingPredicate:predicate];
+    
+    if (index == 0)
+    {
+        content = @"";
+    }
+    else
+    {
+        if (arrayNew.count >= index ) {
+            content = arrayNew[index];
+        }else{
+            content = @"";
+            
+        }
+    }
+    return content;
+    
+}
+- (NSUInteger)comboBox:(NSComboBox *)aComboBox indexOfItemWithStringValue:(NSString *)string{
+    NSArray *arrayOld = [[PublicSerialPort shareInstance] getarray_bandRate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS '%@'",aComboBox.objectValueOfSelectedItem];
+    NSArray *arrayNew = [arrayOld filteredArrayUsingPredicate:predicate];
+    return [arrayNew indexOfObject:string];
+    
 }
 
 @end

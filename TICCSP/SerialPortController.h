@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "UartDevice.h"
 
-@interface SerialPortController : NSViewController<NSApplicationDelegate,NSTableViewDelegate,NSTableViewDataSource>{
+@interface SerialPortController : NSViewController<NSApplicationDelegate,NSTableViewDelegate,NSTableViewDataSource,NSTextFieldDelegate,NSComboBoxDelegate,NSComboBoxDataSource>{
     int fileSize;
     NSString *devecePath;
     NSMutableArray *array_message;
@@ -50,7 +50,7 @@
 @property (weak) IBOutlet NSTextField *label_endSymbol;
 
 @property (weak) IBOutlet NSButton *button_cycleSend;
-- (IBAction)isCRC:(id)sender;
+//- (IBAction)isCRC:(id)sender;
 @property (weak) IBOutlet NSButton *button_logHex;
 - (IBAction)logIsHex:(id)sender;
 @property (weak) IBOutlet NSButton *button_timeStamp;
@@ -65,5 +65,8 @@
 
 @property (weak) IBOutlet NSButton *button_crc;
 @property (weak) IBOutlet NSComboBox *comboBoxBandRate;
+- (IBAction)actComboBoxBandRate:(id)sender;
+
+
 
 @end

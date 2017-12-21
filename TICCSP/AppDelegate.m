@@ -18,7 +18,33 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-   
+    NSDictionary *dConfig = [FileManager getConfigFromConfigJson];
+    int fileSize = [[dConfig valueForKey:@"filesize"] intValue];
+    for (NSMenuItem *aitem in [_menu_logsize itemArray]) {
+        [aitem setState:0];
+    }
+    switch (fileSize) {
+        case 5*1024:
+            [[_menu_logsize itemArray][0] setState:1];
+            break;
+        case 10*1024:
+            [[_menu_logsize itemArray][1] setState:1];
+            break;
+            
+        case 100*1024:
+            [[_menu_logsize itemArray][2] setState:1];
+            break;
+            
+        case 1024*1024:
+            [[_menu_logsize itemArray][3] setState:1];
+            break;
+        case 5*1024*1024:
+            [[_menu_logsize itemArray][4] setState:1];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -89,7 +115,7 @@
     NSInteger result = [panel runModal];
     if (result ==NSFileHandlingPanelOKButton)
     {
-        NSArray *select_files = [panel URLs] ;
+        NSArray *select_files = [panel filenames] ;
         for (int i=0; i<select_files.count; i++)
         {
             path_all= [select_files objectAtIndex:i];

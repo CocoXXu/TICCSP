@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@interface YModelController : NSViewController<NSControlTextEditingDelegate>{
+@interface YModelController : NSViewController<NSControlTextEditingDelegate,NSComboBoxDataSource,NSComboBoxDelegate,NSTextFieldDelegate>{
     NSString *devecePath;
     BOOL ResetFlag;
     BOOL continueRead;

@@ -9,8 +9,6 @@
 #import "SerialPortController.h"
 #import "PublicSerialPort.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-//#import "ORSSerialPortManager.h"
-//#import "ORSSerialPortInstance.h"
 #import "InputBox.h"
 #import "FileManager.h"
 #import "CycleRunProcess.h"
@@ -55,21 +53,36 @@
         }else{
             [_button_chooseAll setState:0];
         }
+        
+        if ([[_array_command[i] valueForKey:@"isHex"] boolValue]) {
+            [_button_hex setState:1];
+        }
     }
+    NSDictionary *dConfig = [FileManager getConfigFromConfigJson];
+    fileSize = [[dConfig valueForKey:@"filesize"] intValue];
 
+    if (fileSize == 0) {
+        fileSize = 10*1024;
+    }
     [_myTableView reloadData];
     [_myTableView setDoubleAction:@selector(doubleClick:)];
     [_button_cell setEnabled:NO];
     [_button_send setEnabled:NO];
     [_button_cycleSend setEnabled:NO];
+    [_comboBoxBandRate setDelegate:self];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewDebugMessage:) name:@"debugMessage" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuMessage:) name:@"menuMessage" object:nil];
+    
 
 }
--(void)menuMessage:(NSNotification *)userInfo{
-    NSDictionary *dict = [userInfo userInfo];
+-(void)menuMessage:(NSNotification *)info{
+    NSDictionary *dict = [info userInfo];
     if ([[dict valueForKey:@"user"] isEqualToString:@"size"]) {
         fileSize = [[dict valueForKey:@"message"] intValue];
+        NSDictionary *dConfig= [FileManager getConfigFromConfigJson];
+        [dConfig setValue:[NSNumber numberWithInt:fileSize] forKey:@"filesize"];
+        [FileManager saveConfigFromConfigJson:dConfig];
+        
     }else if ([[dict valueForKey:@"user"] isEqualToString:@"getnewCommand"]){
         _array_command = [NSMutableArray arrayWithArray:[dict valueForKey:@"message"]];
         [_myTableView reloadData];
@@ -172,10 +185,13 @@
     NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[fileManage contentsOfDirectoryAtPath:@"/dev/" error:nil]];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS 'cu.'"];
     [array filterUsingPredicate:predicate];
+    NSArray *array_serialport = [[array.rac_sequence map:^id(NSString* aport){
+        return [NSString stringWithFormat:@"/dev/%@",aport];
+    }] array];
     [_pop_serialPort removeAllItems];
     if (array.count > 0) {
-        [_pop_serialPort addItemsWithTitles:array];
-        [_pop_serialPort setTitle:array[0]];
+        [_pop_serialPort addItemsWithTitles:array_serialport];
+        [_pop_serialPort setTitle:array_serialport[0]];
     }
     
     
@@ -208,7 +224,7 @@
     NSString *command = [_array_command[_myTableView.selectedRow] valueForKey:@"command"];
     NSData *sendData ;
     NSData *dataEnd;
-    if ([_array_command[_myTableView.selectedRow] valueForKey:@"isHex"])
+    if ([[_array_command[_myTableView.selectedRow] valueForKey:@"isHex"] boolValue])
     {
         sendData = [FileManager hexToBytes:command];
         
@@ -312,10 +328,8 @@
         str_command= [FileManager stringToData:[_label_command stringValue]];
         if ([[_label_endSymbol stringValue] isEqualToString:@"/r/n"]) {
             str_ends = @"0d0a";
-//            [[ORSSerialPortInstance shareInstance] setSendEndSymbol:[FileManager hexToBytes:@"0d0a"]];
         }else{
             str_ends = [FileManager stringToData:[_label_endSymbol stringValue]];
-//            [[ORSSerialPortInstance shareInstance] setSendEndSymbol:[[_label_endSymbol stringValue] dataUsingEncoding:NSUTF8StringEncoding]];
         }
         
     }else{
@@ -328,16 +342,12 @@
         }else{
             data_end = [FileManager hexToBytes:[_label_endSymbol stringValue]];
             str_ends = [[NSString alloc] initWithData:data_end encoding:NSUTF8StringEncoding];
-            
         }
-//        [[ORSSerialPortInstance shareInstance] setSendEndSymbol:data_end];
     }
     
     [_label_command setStringValue:str_command];
     [_label_endSymbol setStringValue:str_ends];
     [_myTableView reloadData];
-    
-    
 }
 
 - (IBAction)chooseAll:(id)sender {
@@ -423,7 +433,6 @@
             [[PublicSerialPort shareInstance] setdevecePath:devecePath];
             [_button_cell setEnabled:YES];
             [_button_send setEnabled:YES];
-//            [_button_burnin setEnabled:YES];
             [_button_cycleSend setEnabled:YES];
             
             //connect ok ,the pority and bandRate will not be change
@@ -471,5 +480,53 @@
     [[PublicSerialPort shareInstance] setcurrentParity:_pop_parity.titleOfSelectedItem];
 }
 
+-(void)controlTextDidChange:(NSNotification*)notification
+{
+    id object = [notification object];
+    [object setCompletes:YES];//这个函数可以实现自动匹配功能
+    
+}
+-(NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox{
+    NSArray *arrayOld = [[PublicSerialPort shareInstance] getarray_bandRate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS '%@'",aComboBox.objectValueOfSelectedItem];
+    NSArray *arrayNew = [arrayOld filteredArrayUsingPredicate:predicate];
+    if (arrayNew.count > 0) {
+        return arrayNew.count;
+    }else{
+        return 0;
+    }
+}
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index{
+    
+    NSString *content = nil;
+    NSArray *arrayOld = [[PublicSerialPort shareInstance] getarray_bandRate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS '%@'",aComboBox.objectValueOfSelectedItem];
+    NSArray *arrayNew = [arrayOld filteredArrayUsingPredicate:predicate];
+    
+    if (index == 0)
+    {
+        content = @"";
+    }
+    else
+    {
+        if (arrayNew.count >= index ) {
+            content = arrayNew[index];
+        }else{
+            content = @"";
 
+        }
+    }
+    return content;
+    
+}
+- (NSUInteger)comboBox:(NSComboBox *)aComboBox indexOfItemWithStringValue:(NSString *)string{
+    NSArray *arrayOld = [[PublicSerialPort shareInstance] getarray_bandRate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS '%@'",aComboBox.objectValueOfSelectedItem];
+    NSArray *arrayNew = [arrayOld filteredArrayUsingPredicate:predicate];
+    return [arrayNew indexOfObject:string];
+    
+}
+- (IBAction)actComboBoxBandRate:(id)sender {
+   
+}
 @end

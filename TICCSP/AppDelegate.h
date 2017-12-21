@@ -10,8 +10,15 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-- (IBAction)configFunction:(id)sender;
 
+
+- (IBAction)setLogSIze5K:(id)sender ;
+- (IBAction)setLogSize10K:(id)sender;
+- (IBAction)setLogSize100K:(id)sender;
+- (IBAction)setLogSize1M:(id)sender;
+- (IBAction)setLogSize5M:(id)sender;
+- (IBAction)importConfigFile:(id)sender;
+- (IBAction)saveConfigFile:(id)sender;
 
 @property (weak) IBOutlet NSMenu *menu_logsize;
 

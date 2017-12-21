@@ -58,5 +58,17 @@
  run apple script to get access to handle Ymodel , if error = nil ,return 1 ,else return 0
  */
 +(NSString *)YmodelScript:(NSString *)scpt;
+/**
+get config dictionary from config
+@param-->filePath get json file with path
+@result   NSDictionary--> return all data in config
+*/
+
++(NSDictionary *)getConfigFromConfigJson;
+
+/**
+ write dict to config
+ */
++(void)saveConfigFromConfigJson:(NSDictionary *)dict;
 
 @end

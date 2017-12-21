@@ -7,7 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
 
-@interface SocketClientController : NSViewController
+@interface SocketClientController : NSViewController<GCDAsyncSocketDelegate>{
+    GCDAsyncSocket *socket;
+}
+@property (weak) IBOutlet NSTextField *tfHostIP;
+@property (weak) IBOutlet NSTextField *tfPort;
+@property (weak) IBOutlet NSButton *buttonOpen;
+- (IBAction)actOpen:(id)sender;
 
 @end
