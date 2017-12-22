@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1801A3A31FEB415700525391 /* ComboBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1801A3A21FEB415700525391 /* ComboBoxCell.m */; };
+		1801A3A61FEB63A700525391 /* UART&UUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1801A3A51FEB63A700525391 /* UART&UUT.m */; };
+		1801A3A91FEB641200525391 /* SocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1801A3A81FEB641200525391 /* SocketClient.m */; };
 		18132B711FB0617F0047D25F /* YModelLoad.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 18132B701FB05DA80047D25F /* YModelLoad.scpt */; };
 		1817B11A1FB1A1B400744F74 /* YModemProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817B1191FB1A1B400744F74 /* YModemProcess.m */; };
 		1817B11D1FB1A3F500744F74 /* YModemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817B11C1FB1A3F500744F74 /* YModemManager.m */; };
@@ -56,6 +58,10 @@
 		136E6E3531E7C16F9998E1F0 /* Pods-TICCSP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICCSP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TICCSP/Pods-TICCSP.release.xcconfig"; sourceTree = "<group>"; };
 		1801A3A11FEB415700525391 /* ComboBoxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboBoxCell.h; sourceTree = "<group>"; };
 		1801A3A21FEB415700525391 /* ComboBoxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxCell.m; sourceTree = "<group>"; };
+		1801A3A41FEB63A700525391 /* UART&UUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UART&UUT.h"; sourceTree = "<group>"; };
+		1801A3A51FEB63A700525391 /* UART&UUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UART&UUT.m"; sourceTree = "<group>"; };
+		1801A3A71FEB641200525391 /* SocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketClient.h; path = ../SocketClient.h; sourceTree = "<group>"; };
+		1801A3A81FEB641200525391 /* SocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocketClient.m; path = ../SocketClient.m; sourceTree = "<group>"; };
 		18132B701FB05DA80047D25F /* YModelLoad.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = YModelLoad.scpt; sourceTree = "<group>"; };
 		1817B1181FB1A1B400744F74 /* YModemProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModemProcess.h; sourceTree = "<group>"; };
 		1817B1191FB1A1B400744F74 /* YModemProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YModemProcess.m; sourceTree = "<group>"; };
@@ -197,6 +203,12 @@
 				189381BF1FB0525D007FEA7C /* YModem.h */,
 				183BEBB61FE770160054365C /* UartDevice.m */,
 				183BEBB71FE770160054365C /* UartDevice.h */,
+				1801A3A41FEB63A700525391 /* UART&UUT.h */,
+				1801A3A51FEB63A700525391 /* UART&UUT.m */,
+				1801A3A71FEB641200525391 /* SocketClient.h */,
+				1801A3A81FEB641200525391 /* SocketClient.m */,
+				181A15481FB296AD009125B1 /* SocketServer.h */,
+				181A15491FB296AD009125B1 /* SocketServer.m */,
 				183BEBB81FE770160054365C /* UART.h */,
 				183BEBB91FE770160054365C /* UART.mm */,
 				1817B11B1FB1A3F500744F74 /* YModemManager.h */,
@@ -241,8 +253,6 @@
 				1897939F1FAC32E600618F59 /* SocketServerController.m */,
 				189793A11FAC32FD00618F59 /* SocketClientController.h */,
 				189793A21FAC32FD00618F59 /* SocketClientController.m */,
-				181A15481FB296AD009125B1 /* SocketServer.h */,
-				181A15491FB296AD009125B1 /* SocketServer.m */,
 				185B0FC61FCE4BF800E60053 /* testD2XXX.c */,
 				185B0FC71FCE4BF800E60053 /* testD2XXX.h */,
 				185B10591FCEA0F100E60053 /* D2XXXViewController.h */,
@@ -411,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185EA9ED1FAAEF3800B34645 /* ORSSerialPortInstance.m in Sources */,
+				1801A3A61FEB63A700525391 /* UART&UUT.m in Sources */,
 				185A19491F9EC5390057DCD1 /* ViewController.m in Sources */,
 				185EA9E01FAABFA600B34645 /* BurninController.m in Sources */,
 				185EA9EE1FAAEF3800B34645 /* ORSSerialPort.m in Sources */,
@@ -436,6 +447,7 @@
 				185EA9F01FAAEF3800B34645 /* ORSSerialPacketDescriptor.m in Sources */,
 				181A154A1FB296AD009125B1 /* SocketServer.m in Sources */,
 				185EA9DD1FAABF8B00B34645 /* SerialPortController.m in Sources */,
+				1801A3A91FEB641200525391 /* SocketClient.m in Sources */,
 				185EA9EF1FAAEF3800B34645 /* ORSSerialBuffer.m in Sources */,
 				185EA9F51FAAF27200B34645 /* FileManager.m in Sources */,
 				183BEBBA1FE770160054365C /* UartDevice.m in Sources */,

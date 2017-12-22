@@ -7,7 +7,14 @@
 //
 
 #import "ORSSerialPort.h"
+#import "UART&UUT.h"
+#import <CocoaAsyncSocket/CocoaAsyncSocket.h>
 
-@interface SocketServer : ORSSerialPort
+@interface SocketServer : UART_UUT<GCDAsyncSocketDelegate>{
+    GCDAsyncSocket *serverSocket;
+    NSMutableArray *arrayclientSocket;
+    NSMutableDictionary *dictClientSocket;
+    NSMutableData *dataReceive;
+}
 
 @end

@@ -193,8 +193,6 @@
         [_pop_serialPort addItemsWithTitles:array_serialport];
         [_pop_serialPort setTitle:array_serialport[0]];
     }
-    
-    
 }
 
 
