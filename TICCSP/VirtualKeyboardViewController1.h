@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "ftd2xx.h"
 
-@interface D2XXXViewController : NSViewController{
+@interface VirtualKeyboardViewController : NSViewController{
     FT_HANDLE handle;
 }
 @property (weak) IBOutlet NSPopUpButton *pop_serialPort;
@@ -32,4 +32,6 @@
 @property (weak) IBOutlet NSTextField *label_percentage;
 @property (weak) IBOutlet NSTextField *label_name;
 @property (weak) IBOutlet NSTextField *label_size;
+
+
 @end

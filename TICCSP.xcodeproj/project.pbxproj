@@ -20,6 +20,8 @@
 		181A154C1FB29CC3009125B1 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A154B1FB29CC3009125B1 /* CocoaAsyncSocket.framework */; };
 		183BEBBA1FE770160054365C /* UartDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 183BEBB61FE770160054365C /* UartDevice.m */; };
 		183BEBBB1FE770160054365C /* UART.mm in Sources */ = {isa = PBXBuildFile; fileRef = 183BEBB91FE770160054365C /* UART.mm */; };
+		185A1370200D902200CC716F /* VirtualKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A136F200D902200CC716F /* VirtualKeyboardViewController.m */; };
+		185A1378200DF44E00CC716F /* virsualKeyConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 185A1377200DF44E00CC716F /* virsualKeyConfig.json */; };
 		185A19431F9EC5390057DCD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A19421F9EC5390057DCD1 /* AppDelegate.m */; };
 		185A19461F9EC5390057DCD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A19451F9EC5390057DCD1 /* main.m */; };
 		185A19491F9EC5390057DCD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A19481F9EC5390057DCD1 /* ViewController.m */; };
@@ -28,7 +30,6 @@
 		185AAB041FDFBCC90085567B /* ConfigFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AAB031FDFBCC90085567B /* ConfigFunction.m */; };
 		185AAB071FDFCCE60085567B /* ConfirmKeyWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AAB061FDFCCE60085567B /* ConfirmKeyWord.m */; };
 		185B0FC81FCE4BF800E60053 /* testD2XXX.c in Sources */ = {isa = PBXBuildFile; fileRef = 185B0FC61FCE4BF800E60053 /* testD2XXX.c */; };
-		185B105B1FCEA0F100E60053 /* D2XXXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B105A1FCEA0F100E60053 /* D2XXXViewController.m */; };
 		185B10631FCEA86E00E60053 /* D2XXXWriteAndRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B10621FCEA86E00E60053 /* D2XXXWriteAndRead.m */; };
 		185C9E9B1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C9E9A1FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.m */; };
 		185EA9DA1FAABF4A00B34645 /* YModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EA9D91FAABF4A00B34645 /* YModelController.m */; };
@@ -79,6 +80,9 @@
 		183BEBB71FE770160054365C /* UartDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UartDevice.h; sourceTree = "<group>"; };
 		183BEBB81FE770160054365C /* UART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UART.h; sourceTree = "<group>"; };
 		183BEBB91FE770160054365C /* UART.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UART.mm; sourceTree = "<group>"; };
+		185A136E200D902200CC716F /* VirtualKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualKeyboardViewController.h; sourceTree = "<group>"; };
+		185A136F200D902200CC716F /* VirtualKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualKeyboardViewController.m; sourceTree = "<group>"; };
+		185A1377200DF44E00CC716F /* virsualKeyConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = virsualKeyConfig.json; sourceTree = "<group>"; };
 		185A193E1F9EC5390057DCD1 /* TICCSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TICCSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185A19411F9EC5390057DCD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185A19421F9EC5390057DCD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,8 +98,6 @@
 		185AAB061FDFCCE60085567B /* ConfirmKeyWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmKeyWord.m; sourceTree = "<group>"; };
 		185B0FC61FCE4BF800E60053 /* testD2XXX.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testD2XXX.c; sourceTree = "<group>"; };
 		185B0FC71FCE4BF800E60053 /* testD2XXX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testD2XXX.h; sourceTree = "<group>"; };
-		185B10591FCEA0F100E60053 /* D2XXXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2XXXViewController.h; sourceTree = "<group>"; };
-		185B105A1FCEA0F100E60053 /* D2XXXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2XXXViewController.m; sourceTree = "<group>"; };
 		185B10611FCEA86E00E60053 /* D2XXXWriteAndRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2XXXWriteAndRead.h; sourceTree = "<group>"; };
 		185B10621FCEA86E00E60053 /* D2XXXWriteAndRead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2XXXWriteAndRead.m; sourceTree = "<group>"; };
 		185C9E991FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YModemProcessWithD2XXX.h; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				1819E32E1FB1591A0069C92F /* InputBox.h */,
 				1819E32F1FB1591A0069C92F /* InputBox.m */,
 				18F67C361FEA0109002A1C88 /* config.json */,
+				185A1377200DF44E00CC716F /* virsualKeyConfig.json */,
 				1819E32C1FB1539B0069C92F /* command.json */,
 				189381C11FB054A7007FEA7C /* eeprom.c */,
 				189381C21FB054A7007FEA7C /* eeprom.h */,
@@ -249,14 +252,14 @@
 				185EA9DF1FAABFA600B34645 /* BurninController.m */,
 				189793A61FAC4CC000618F59 /* ResetUserAndPwdController.h */,
 				189793A71FAC4CC000618F59 /* ResetUserAndPwdController.m */,
+				185A136E200D902200CC716F /* VirtualKeyboardViewController.h */,
+				185A136F200D902200CC716F /* VirtualKeyboardViewController.m */,
 				1897939E1FAC32E600618F59 /* SocketServerController.h */,
 				1897939F1FAC32E600618F59 /* SocketServerController.m */,
 				189793A11FAC32FD00618F59 /* SocketClientController.h */,
 				189793A21FAC32FD00618F59 /* SocketClientController.m */,
 				185B0FC61FCE4BF800E60053 /* testD2XXX.c */,
 				185B0FC71FCE4BF800E60053 /* testD2XXX.h */,
-				185B10591FCEA0F100E60053 /* D2XXXViewController.h */,
-				185B105A1FCEA0F100E60053 /* D2XXXViewController.m */,
 				185B10611FCEA86E00E60053 /* D2XXXWriteAndRead.h */,
 				185B10621FCEA86E00E60053 /* D2XXXWriteAndRead.m */,
 				185C9E991FCF9FCD00AD4A96 /* YModemProcessWithD2XXX.h */,
@@ -349,6 +352,7 @@
 			files = (
 				18F67C371FEA0109002A1C88 /* config.json in Resources */,
 				18132B711FB0617F0047D25F /* YModelLoad.scpt in Resources */,
+				185A1378200DF44E00CC716F /* virsualKeyConfig.json in Resources */,
 				1819E32D1FB1539B0069C92F /* command.json in Resources */,
 				189381C81FB054A7007FEA7C /* ftd2xx.cfg in Resources */,
 				189793A51FAC47C100618F59 /* YModel.scpt in Resources */,
@@ -443,7 +447,6 @@
 				189793A81FAC4CC000618F59 /* ResetUserAndPwdController.m in Sources */,
 				185EA9DA1FAABF4A00B34645 /* YModelController.m in Sources */,
 				185AAB041FDFBCC90085567B /* ConfigFunction.m in Sources */,
-				185B105B1FCEA0F100E60053 /* D2XXXViewController.m in Sources */,
 				185EA9F01FAAEF3800B34645 /* ORSSerialPacketDescriptor.m in Sources */,
 				181A154A1FB296AD009125B1 /* SocketServer.m in Sources */,
 				185EA9DD1FAABF8B00B34645 /* SerialPortController.m in Sources */,
@@ -455,6 +458,7 @@
 				1819E3301FB1591A0069C92F /* InputBox.m in Sources */,
 				185B10631FCEA86E00E60053 /* D2XXXWriteAndRead.m in Sources */,
 				189793A31FAC32FD00618F59 /* SocketClientController.m in Sources */,
+				185A1370200D902200CC716F /* VirtualKeyboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

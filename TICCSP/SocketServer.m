@@ -49,7 +49,7 @@
     
     //保存客户端的socket
     if (![[dictClientSocket allKeys] containsObject:newSocket]) {
-        [dictClientSocket setObject:<#(nonnull id)#> forKey:<#(nonnull id<NSCopying>)#>]
+//        [dictClientSocket setObject:<#(nonnull id)#> forKey:<#(nonnull id<NSCopying>)#>]
     }
     
     [newSocket readDataWithTimeout:-1 tag:0];

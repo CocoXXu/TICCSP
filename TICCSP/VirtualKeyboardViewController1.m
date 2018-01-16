@@ -6,7 +6,7 @@
 //  Copyright © 2017年 coco. All rights reserved.
 //
 
-#import "D2XXXViewController.h"
+#import "VirtualKeyboardViewController.h"
 #import "ResetUserAndPwdController.h"
 #import "FileManager.h"
 #import "testD2XXX.h"
@@ -16,11 +16,11 @@
 #import "YModemProcess.h"
 #import "YModemManager.h"
 
-@interface D2XXXViewController ()
+@interface VirtualKeyboardViewController ()
 
 @end
 
-@implementation D2XXXViewController
+@implementation VirtualKeyboardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

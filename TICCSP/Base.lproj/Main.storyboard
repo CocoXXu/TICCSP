@@ -792,8 +792,8 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-g6-3GT">
-                                <rect key="frame" x="85" y="67" width="120" height="32"/>
-                                <buttonCell key="cell" type="push" title="D2XXX" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="giy-hr-uBs">
+                                <rect key="frame" x="77" y="67" width="137" height="32"/>
+                                <buttonCell key="cell" type="push" title="VirtualKeyboard" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="giy-hr-uBs">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
@@ -1740,70 +1740,16 @@
             </objects>
             <point key="canvasLocation" x="711" y="898"/>
         </scene>
-        <!--D2XXX-->
+        <!--VirtualKeyboard-->
         <scene sceneID="tj9-cG-gWo">
             <objects>
-                <viewController title="D2XXX" id="pWG-7U-Suf" customClass="D2XXXViewController" sceneMemberID="viewController">
+                <viewController title="VirtualKeyboard" id="pWG-7U-Suf" userLabel="VirtualKeyboard" customClass="VirtualKeyboardViewController" sceneMemberID="viewController">
                     <view key="view" id="1k2-3j-Rq7">
-                        <rect key="frame" x="0.0" y="0.0" width="484" height="272"/>
+                        <rect key="frame" x="0.0" y="0.0" width="606" height="445"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-Fh-Osq">
-                                <rect key="frame" x="33" y="163" width="71" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FilePath" id="yEn-jE-S91">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField identifier="filepath" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ay6-tq-fSU">
-                                <rect key="frame" x="103" y="161" width="357" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请将文件拖至此区域" drawsBackground="YES" allowsEditingTextAttributes="YES" id="y2N-pe-xHA">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-GR-rxH">
-                                <rect key="frame" x="201" y="123" width="92" height="32"/>
-                                <buttonCell key="cell" type="push" title="开始烧录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J9z-aC-gDS">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="act_burnin:" target="pWG-7U-Suf" id="XJM-p7-EJI"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OyV-hq-ASc">
-                                <rect key="frame" x="33" y="44" width="275" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="烧录进度" id="VJy-DC-xx0">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9n-rY-hMA">
-                                <rect key="frame" x="33" y="105" width="429" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="文件名称：" id="Wc9-NS-xCu">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56U-tM-Da7">
-                                <rect key="frame" x="33" y="75" width="429" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="文件大小：" id="3Y6-bB-DcD">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4tH-3j-tgv">
-                                <rect key="frame" x="42" y="12" width="418" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="10" warningValue="2" criticalValue="2" id="2xm-BH-PsL"/>
-                            </levelIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdm-hX-bIv">
-                                <rect key="frame" x="18" y="251" width="77" height="20"/>
+                                <rect key="frame" x="18" y="424" width="77" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="SerialPort" id="gVE-lr-YcO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1811,7 +1757,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cig-1k-iKO">
-                                <rect key="frame" x="18" y="223" width="77" height="20"/>
+                                <rect key="frame" x="18" y="396" width="77" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BandRate" id="WBS-Ps-e7T">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1819,7 +1765,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAR-19-6p6">
-                                <rect key="frame" x="99" y="247" width="256" height="26"/>
+                                <rect key="frame" x="99" y="420" width="256" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="8Lb-ZA-H6x">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1836,7 +1782,7 @@
                                 </connections>
                             </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-UZ-Mys">
-                                <rect key="frame" x="395" y="244" width="71" height="32"/>
+                                <rect key="frame" x="395" y="417" width="71" height="32"/>
                                 <buttonCell key="cell" type="push" title="搜索" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fv4-zJ-kke">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1846,7 +1792,7 @@
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCF-Gn-2NR">
-                                <rect key="frame" x="290" y="218" width="111" height="26"/>
+                                <rect key="frame" x="290" y="391" width="111" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LDm-NA-6go" id="kLY-sO-e2n">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1863,7 +1809,7 @@
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tR0-Ko-fzm">
-                                <rect key="frame" x="240" y="220" width="54" height="20"/>
+                                <rect key="frame" x="240" y="393" width="54" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Parity:" id="9Pg-hg-PFs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1871,7 +1817,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCF-2W-0NV">
-                                <rect key="frame" x="395" y="214" width="71" height="32"/>
+                                <rect key="frame" x="395" y="387" width="71" height="32"/>
                                 <buttonCell key="cell" type="push" title="打开" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W9a-Rk-dQ8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1880,16 +1826,8 @@
                                     <action selector="act_open:" target="pWG-7U-Suf" id="qJ9-57-fle"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJY-PB-TsJ">
-                                <rect key="frame" x="30" y="187" width="491" height="25"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="串口打开成功，等待控制板连接......" id="9d6-Nv-30K">
-                                    <font key="font" size="16" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-47-Cyo">
-                                <rect key="frame" x="103" y="219" width="134" height="26"/>
+                                <rect key="frame" x="103" y="392" width="134" height="26"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="b2h-2m-FBV">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1901,26 +1839,134 @@
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHD-43-nAR">
+                                <rect key="frame" x="20" y="20" width="566" height="365"/>
+                                <clipView key="contentView" ambiguous="YES" id="iwb-C5-wPu">
+                                    <rect key="frame" x="1" y="23" width="564" height="341"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="ucF-Ud-8So" id="jVr-Vm-eor">
+                                            <rect key="frame" x="0.0" y="0.0" width="564" height="341"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn identifier="key" width="129" minWidth="40" maxWidth="1000" id="BQU-fw-Tjx">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="command">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="mVm-FV-iWb">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn identifier="keyin" width="133" minWidth="40" maxWidth="1000" id="aaI-FQ-T52">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="KeyIn">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="rqE-hf-CMF">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn identifier="clickMode" width="99" minWidth="10" maxWidth="3.4028234663852886e+38" id="kwf-mw-R37">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ClickMode">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <popUpButtonCell key="dataCell" type="bevel" title="RightMouseDown" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="yw7-Q5-Ez6" id="bys-iI-4hW">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                        <menu key="menu" id="k9r-OI-DYR">
+                                                            <items>
+                                                                <menuItem title="LeftMouseDown" id="W5K-kv-3TS"/>
+                                                                <menuItem title="RightMouseDown" state="on" id="yw7-Q5-Ez6"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn identifier="LocationX" width="87" minWidth="10" maxWidth="3.4028234663852886e+38" id="utl-Y5-D6S">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ClickLocationX">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="H0M-eG-2qO">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn identifier="LocationY" width="101" minWidth="10" maxWidth="3.4028234663852886e+38" id="36E-mx-VOv">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ClickLocationY">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="ZCl-2m-KJR">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="LDB-iZ-nOI">
+                                    <rect key="frame" x="1" y="346" width="564" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="vG6-sU-FjO">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="ucF-Ud-8So">
+                                    <rect key="frame" x="0.0" y="0.0" width="564" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWV-Xd-mUg">
+                                <rect key="frame" x="461" y="416" width="118" height="32"/>
+                                <buttonCell key="cell" type="push" title="开始量测坐标" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FVt-Fa-YyN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ActMeasure:" target="pWG-7U-Suf" id="ML6-Dp-Jy2"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="ComboBox_bandRate" destination="vVL-47-Cyo" id="X8T-I5-Uj3"/>
-                        <outlet property="Label_Info" destination="YJY-PB-TsJ" id="8qL-1f-7Lj"/>
-                        <outlet property="button_burnin" destination="XT2-GR-rxH" id="qUe-OM-MTs"/>
+                        <outlet property="buttonMeasureLocation" destination="fWV-Xd-mUg" id="OFs-22-DFo"/>
                         <outlet property="button_open" destination="yCF-2W-0NV" id="KSu-aI-JgZ"/>
                         <outlet property="button_search" destination="sxn-UZ-Mys" id="hjJ-K1-hpA"/>
-                        <outlet property="label_name" destination="L9n-rY-hMA" id="jfC-I7-UiA"/>
-                        <outlet property="label_percentage" destination="OyV-hq-ASc" id="Vh6-iv-cKV"/>
-                        <outlet property="label_size" destination="56U-tM-Da7" id="wBM-KA-iCV"/>
-                        <outlet property="level_progress" destination="4tH-3j-tgv" id="elo-b2-gRl"/>
+                        <outlet property="comboBoxBandRate" destination="vVL-47-Cyo" id="1z2-pQ-3zu"/>
+                        <outlet property="mytableView" destination="jVr-Vm-eor" id="ts4-4a-bYv"/>
                         <outlet property="pop_parity" destination="wCF-Gn-2NR" id="9R2-uo-Vao"/>
                         <outlet property="pop_serialPort" destination="WAR-19-6p6" id="WP4-Jf-ZJT"/>
-                        <outlet property="textField_filePath" destination="ay6-tq-fSU" id="b4m-zm-dLf"/>
                     </connections>
                 </viewController>
                 <customObject id="8sT-xB-PKp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="1310"/>
+            <point key="canvasLocation" x="270" y="1389.5"/>
         </scene>
         <!--GetKeyWord-->
         <scene sceneID="T1O-kH-kIc">
@@ -2029,8 +2075,8 @@ DQ
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-3X-3mS">
-                                <rect key="frame" x="83" y="53" width="112" height="25"/>
-                                <buttonCell key="cell" type="check" title="D2XXX" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="mol-Xa-e9Q">
+                                <rect key="frame" x="83" y="53" width="119" height="25"/>
+                                <buttonCell key="cell" type="check" title="VirtualKeyboard" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="mol-Xa-e9Q">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
