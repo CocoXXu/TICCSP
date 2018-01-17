@@ -135,6 +135,23 @@
 
 }
 
++(void)SaveCommandToJsonFile:(NSArray *)commandArray andFileName:(NSString *)file{
+    
+    NSMutableDictionary *config_dict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    for (int i = 0; i < commandArray.count; i++) {
+        NSString *akey = [commandArray[i] valueForKey:@"key"];
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:commandArray[i]];
+        [dict removeObjectForKey:akey];
+        [config_dict setValue:dict forKey:akey];
+    }
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"json"];
+    NSOutputStream *outStream = [[NSOutputStream alloc] initToFileAtPath:filePath append:NO];
+    [outStream open];
+    [NSJSONSerialization writeJSONObject:config_dict toStream:outStream options:NSJSONWritingPrettyPrinted error:nil];
+    [outStream close];
+    
+}
+
 +(NSData *)GetParityData:(NSString *)parity andOriginData:(NSData *)originData{
     NSData *data = [[NSData alloc] init];
     return data;

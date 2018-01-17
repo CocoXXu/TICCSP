@@ -89,6 +89,10 @@ static uint16_t ym_crc16(const uint8_t *buf, uint16_t len)
     NSString *str_timeOut = @"time out";
     return [[NSData alloc] initWithBytes:[str_timeOut UTF8String] length:[str_timeOut length]];
 }
+-(NSData *)readData{
+    NSData *currentReadData = [auart read];
+    return  currentReadData;
+}
 
 
 -(NSData *)write:(NSString *)str andReadWithEndSymbol:(NSString *)endSymbol andTimeOut:(int)timeout{

@@ -1,13 +1,13 @@
 {
     "command":{
         "keyin":"f111",
-        "clickMode":"LeftMouseDown",
+        "clickMode":"LeftMouseClick",
         "LocationX":127.12,
         "LocationY":60.14
     },
     "START":{
         "keyin":"f112",
-        "clickMode":"LeftMouseDown",
+        "clickMode":"LeftMouseClick",
         "LocationX":127.12,
         "LocationY":60.14
     }

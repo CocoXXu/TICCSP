@@ -46,6 +46,8 @@
  */
 +(void)SaveCommandToCommandJson:(NSArray *)commandArray;
 
++(void)SaveCommandToJsonFile:(NSArray *)commandArray andFileName:(NSString *)file;
+
 /**
  get array from command.json , array conatains the key , and all value for the key
  @param-->filePath get json file with path

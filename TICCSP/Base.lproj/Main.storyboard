@@ -1765,7 +1765,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAR-19-6p6">
-                                <rect key="frame" x="99" y="420" width="256" height="26"/>
+                                <rect key="frame" x="99" y="420" width="383" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="8Lb-ZA-H6x">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1782,7 +1782,7 @@
                                 </connections>
                             </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-UZ-Mys">
-                                <rect key="frame" x="395" y="417" width="71" height="32"/>
+                                <rect key="frame" x="521" y="418" width="71" height="32"/>
                                 <buttonCell key="cell" type="push" title="搜索" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fv4-zJ-kke">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1792,7 +1792,7 @@
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCF-Gn-2NR">
-                                <rect key="frame" x="290" y="391" width="111" height="26"/>
+                                <rect key="frame" x="371" y="391" width="111" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LDm-NA-6go" id="kLY-sO-e2n">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1809,7 +1809,7 @@
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tR0-Ko-fzm">
-                                <rect key="frame" x="240" y="393" width="54" height="20"/>
+                                <rect key="frame" x="321" y="393" width="54" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Parity:" id="9Pg-hg-PFs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1817,7 +1817,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCF-2W-0NV">
-                                <rect key="frame" x="395" y="387" width="71" height="32"/>
+                                <rect key="frame" x="521" y="384" width="71" height="32"/>
                                 <buttonCell key="cell" type="push" title="打开" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W9a-Rk-dQ8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1840,13 +1840,13 @@
                                 </comboBoxCell>
                             </comboBox>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHD-43-nAR">
-                                <rect key="frame" x="20" y="20" width="566" height="365"/>
+                                <rect key="frame" x="20" y="84" width="566" height="290"/>
                                 <clipView key="contentView" ambiguous="YES" id="iwb-C5-wPu">
-                                    <rect key="frame" x="1" y="23" width="564" height="341"/>
+                                    <rect key="frame" x="1" y="0.0" width="564" height="289"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="ucF-Ud-8So" id="jVr-Vm-eor">
-                                            <rect key="frame" x="0.0" y="0.0" width="564" height="341"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="564" height="266"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1885,13 +1885,15 @@
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
-                                                    <popUpButtonCell key="dataCell" type="bevel" title="RightMouseDown" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="yw7-Q5-Ez6" id="bys-iI-4hW">
+                                                    <popUpButtonCell key="dataCell" type="bevel" title="RightMouseDoubleClick" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="sEI-k8-uJv" id="bys-iI-4hW">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" metaFont="menu"/>
                                                         <menu key="menu" id="k9r-OI-DYR">
                                                             <items>
-                                                                <menuItem title="LeftMouseDown" id="W5K-kv-3TS"/>
-                                                                <menuItem title="RightMouseDown" state="on" id="yw7-Q5-Ez6"/>
+                                                                <menuItem title="NONE" id="yuo-cz-6kW"/>
+                                                                <menuItem title="LeftMouseClick" id="W5K-kv-3TS"/>
+                                                                <menuItem title="RightMouseClick" id="yw7-Q5-Ez6"/>
+                                                                <menuItem title="RightMouseDoubleClick" state="on" id="sEI-k8-uJv" userLabel="RightDoubleMouseDown"/>
                                                             </items>
                                                         </menu>
                                                     </popUpButtonCell>
@@ -1929,11 +1931,11 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="LDB-iZ-nOI">
-                                    <rect key="frame" x="1" y="346" width="564" height="16"/>
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="vG6-sU-FjO">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="vG6-sU-FjO">
+                                    <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="ucF-Ud-8So">
@@ -1942,13 +1944,43 @@
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWV-Xd-mUg">
-                                <rect key="frame" x="461" y="416" width="118" height="32"/>
+                                <rect key="frame" x="474" y="50" width="118" height="32"/>
                                 <buttonCell key="cell" type="push" title="开始量测坐标" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FVt-Fa-YyN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="ActMeasure:" target="pWG-7U-Suf" id="ML6-Dp-Jy2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHS-U3-g3D">
+                                <rect key="frame" x="81" y="47" width="37" height="30"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zkj-n4-3hK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="act_remove:" target="pWG-7U-Suf" id="S2P-Uu-yKd"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xxx-gZ-OUn">
+                                <rect key="frame" x="20" y="47" width="35" height="30"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PVt-KA-qYe">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="act_add:" target="pWG-7U-Suf" id="jol-8F-lVx"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oI-fS-YBh">
+                                <rect key="frame" x="145" y="47" width="37" height="30"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSShareTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BvY-ai-stu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="act_save:" target="pWG-7U-Suf" id="CB5-1d-OLA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1966,7 +1998,7 @@
                 </viewController>
                 <customObject id="8sT-xB-PKp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="1389.5"/>
+            <point key="canvasLocation" x="343" y="1377.5"/>
         </scene>
         <!--GetKeyWord-->
         <scene sceneID="T1O-kH-kIc">
@@ -2107,4 +2139,9 @@ DQ
             <point key="canvasLocation" x="285.5" y="-131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="NSShareTemplate" width="11" height="16"/>
+    </resources>
 </document>

@@ -51,7 +51,7 @@
     
     NSString *virsualJson = [[NSBundle mainBundle] pathForResource:@"virsualKeyConfig" ofType:@"json"];
     maVirsualConfig = [[NSMutableArray alloc] initWithArray:[FileManager GetCommandArrayFromCommandJsonWithPath:virsualJson]];
-    NSLog(@"%@",maVirsualConfig);
+//    NSLog(@"%@",maVirsualConfig);
     // Do view setup here.
 }
 
@@ -99,10 +99,16 @@
     }
 }
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
-    return maVirsualConfig.count;
+    @synchronized (maVirsualConfig) {
+        return maVirsualConfig.count;
+    }
+    
 }
 -(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
-    return [maVirsualConfig[row] valueForKey:tableColumn.identifier];
+    @synchronized (maVirsualConfig) {
+         return [maVirsualConfig[row] valueForKey:tableColumn.identifier];
+    }
+   
     
 }
 
@@ -111,9 +117,15 @@
         NSPopUpButtonCell *cell = [tableColumn dataCellForRow:row];
         NSArray *array = cell.itemArray;
         NSMenuItem *item = [array objectAtIndex:[object intValue]];
-        [maVirsualConfig[row] setValue:item.title forKey:@"clickMode"];
+        @synchronized (maVirsualConfig) {
+            [maVirsualConfig[row] setValue:item.title forKey:@"clickMode"];
+        }
+        
     }else{
-        [maVirsualConfig[row] setValue:object forKey:tableColumn.identifier];
+        @synchronized (maVirsualConfig) {
+            [maVirsualConfig[row] setValue:object forKey:tableColumn.identifier];
+        }
+        
     }
 
 }
@@ -123,7 +135,10 @@
 {
     if ([[aTableColumn identifier] isEqualToString:@"clickMode"])
     {
-        [aCell setTitle:[maVirsualConfig[rowIndex] valueForKey:aTableColumn.identifier]];
+        @synchronized (maVirsualConfig) {
+            [aCell setTitle:[maVirsualConfig[rowIndex] valueForKey:aTableColumn.identifier]];
+        }
+        
     }
     
 }
@@ -156,6 +171,7 @@
             [_pop_parity setEnabled:NO];
             [_comboBoxBandRate setEnabled:NO];
             [_button_open setTitle:@"断开"];
+            [self readDataFromUart];
         }else{//if open fail
             NSAlert *alert = [[NSAlert alloc] init];
             [alert setMessageText:@"open fail"];
@@ -166,7 +182,137 @@
             [_button_open setTitle:@"打开"];
             [_pop_parity setEnabled:YES];
             [_comboBoxBandRate setEnabled:YES];
+            aDevice = nil;
         }//end if close success
     }//end open serial port
 }
+
+- (IBAction)act_add:(id)sender {
+    for(int i = 0;i <9999;i++){
+        NSString *key = [NSString stringWithFormat:@"test%d",i];
+        bool bName = NO;
+        @synchronized (maVirsualConfig) {
+            for (NSDictionary *dict in maVirsualConfig) {
+                if( [[dict valueForKey:@"key"] isEqualToString:key]){
+                    bName = YES;
+                    break;
+                }
+            }
+
+        }
+        if (bName == NO) {
+            NSMutableDictionary *newDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:key,@"key",key,@"keyin",@"NONE",@"clickMode",@"0.0",@"LocationX",@"0.0",@"LocationY", nil];
+            @synchronized (maVirsualConfig){
+                [maVirsualConfig addObject:newDict];
+            }
+            
+            [_mytableView reloadData];
+            break;
+        }
+    }
+}
+
+- (IBAction)act_remove:(id)sender {
+    NSInteger index = [_mytableView selectedRow];
+    @synchronized (maVirsualConfig) {
+        [maVirsualConfig removeObjectAtIndex:index];
+    }
+    
+    [_mytableView reloadData];
+}
+
+- (IBAction)act_save:(id)sender {
+    [FileManager SaveCommandToJsonFile:maVirsualConfig andFileName:@"virsualKeyConfig"];
+}
+
+-(void)readDataFromUart{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableData *mData = [[NSMutableData alloc] initWithCapacity:0];
+        while (aDevice) {
+            NSData *data = [aDevice readData];
+            [mData appendData:data];
+            NSString *str = [[NSString alloc] initWithData:mData encoding:NSUTF8StringEncoding];
+            @synchronized (maVirsualConfig) {
+                for (NSDictionary *dict in maVirsualConfig) {
+                    if ([[dict valueForKey:@"key"] isEqualToString:str]) {
+                        [self doVirsualWithKey:dict];
+                        [mData resetBytesInRange:NSMakeRange(0, [mData length])];
+                        [mData setLength:0];
+                        break;
+                    }
+                }
+            }
+            
+        }
+    });
+}
+
+-(void)doVirsualWithKey:(NSDictionary *)dict{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSThread sleepForTimeInterval:2];
+        float locationX = [[dict valueForKey:@"LocationX"] floatValue];
+        float locationY = [[dict valueForKey:@"LocationY"] floatValue];
+        NSString *sWrite = [dict valueForKey:@"keyin"];
+        [self writeString:sWrite withFlags:0];
+        
+        CGPoint pt = CGPointMake(locationX, locationY);
+        if ([[dict valueForKey:@"clickMode"] isEqualToString:@"LeftMouseClick"]) {
+            PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseDown, pt);
+            PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseUp, pt);
+        }else if ([[dict valueForKey:@"clickMode"] isEqualToString:@"RightMouseClick"]){
+            PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseDown, pt);
+            PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseUp, pt);
+        }else if ([[dict valueForKey:@"clickMode"] isEqualToString:@"RightMouseDoubleClick"]){
+//            PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseDown, pt);
+//            PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseUp, pt);
+////            [NSThread sleepForTimeInterval:0.2];
+//            PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseDown, pt);
+//            PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseUp, pt);
+            [self doubleClick:2 andPoint:pt];
+        }
+    });
+}
+
+-(void) doubleClick:(int)clickCount andPoint:(CGPoint) point {
+    CGEventRef theEvent = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);
+    CGEventSetIntegerValueField(theEvent, kCGMouseEventClickState, clickCount);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    CGEventSetType(theEvent, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    CGEventSetType(theEvent, kCGEventLeftMouseDown);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    CGEventSetType(theEvent, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    CFRelease(theEvent);
+}
+
+void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point)
+{
+    CGEventRef theEvent = CGEventCreateMouseEvent(NULL, type, point, button);
+    CGEventSetType(theEvent, type);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    CFRelease(theEvent);
+}
+
+-(void)writeString:(NSString *)valueToSet withFlags:(int)flags
+{
+    UniChar buffer;
+    CGEventRef keyEventDown = CGEventCreateKeyboardEvent(NULL, 1, true);
+    CGEventRef keyEventUp = CGEventCreateKeyboardEvent(NULL, 1, false);
+    CGEventSetFlags(keyEventDown,0);
+    CGEventSetFlags(keyEventUp,0);
+    for (int i = 0; i < [valueToSet length]; i++) {
+        [valueToSet getCharacters:&buffer range:NSMakeRange(i, 1)];
+        CGEventKeyboardSetUnicodeString(keyEventDown, 1, &buffer);
+        CGEventSetFlags(keyEventDown,flags);
+        CGEventPost(kCGSessionEventTap, keyEventDown);
+        CGEventKeyboardSetUnicodeString(keyEventUp, 1, &buffer);
+        CGEventSetFlags(keyEventUp,flags);
+        CGEventPost(kCGSessionEventTap, keyEventUp);
+        
+    }
+    CFRelease(keyEventUp);
+    CFRelease(keyEventDown);
+}
+
 @end

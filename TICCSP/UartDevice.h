@@ -24,4 +24,6 @@
 -(int)writeEndSybmolData:(NSData *)dataSend withEndSymbol:(NSData *)endData andCrc:(BOOL)isCRC andIsEndSymol:(BOOL)isES;
 
 -(BOOL)close;
+
+-(NSData *)readData;
 @end

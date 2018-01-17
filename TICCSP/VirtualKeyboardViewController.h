@@ -28,4 +28,8 @@
 @property (weak) IBOutlet NSButton *button_open;
 - (IBAction)act_search:(id)sender;
 - (IBAction)act_open:(id)sender;
+- (IBAction)act_add:(id)sender;
+- (IBAction)act_remove:(id)sender;
+- (IBAction)act_save:(id)sender;
+
 @end
