@@ -171,4 +171,18 @@
 
 }
 
++( uint16_t) ym_crc16:(const uint8_t *)buf andLen:( uint16_t) len
+{
+    uint16_t x;
+    uint16_t crc = 0;
+    while (len--)
+    {
+        x = (crc >> 8) ^ *buf++;
+        x ^= x >> 4;
+        crc = (crc << 8) ^ (x << 12) ^ (x << 5) ^ x;
+    }
+    return crc;
+}
+
+
 @end

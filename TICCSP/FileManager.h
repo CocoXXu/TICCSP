@@ -72,5 +72,9 @@ get config dictionary from config
  write dict to config
  */
 +(void)saveConfigFromConfigJson:(NSDictionary *)dict;
+/**
+ get crc data
+ */
++( uint16_t) ym_crc16:(const uint8_t *)buf andLen:( uint16_t) len;
 
 @end
